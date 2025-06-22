@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Sun Jun 22 21:53:14 2025
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : baud_gen
+Top-level Entity Name : uart_top
+Family : Cyclone IV GX
+Total logic elements : 124
+    Total combinational functions : 98
+    Dedicated logic registers : 81
+Total registers : 81
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

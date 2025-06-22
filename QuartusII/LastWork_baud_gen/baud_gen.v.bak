@@ -1,0 +1,27 @@
+module baud_gen(
+    input wire clk,       // 系统时钟（如50MHz）
+    input wire rst_n,     // 复位信号（低电平有效）
+    output reg baud_clk   // 波特率时钟
+);
+
+    // 可配置参数：波特率115200bps@50MHz时钟
+    parameter BAUD_RATE = 115200;
+    parameter SYS_CLK = 50_000_000;
+    parameter DIVIDER = SYS_CLK / (BAUD_RATE * 16) - 1;  // 16倍过采样分频系数
+
+    reg [15:0] cnt;  // 计数器宽度根据分频系数调整
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            cnt <= 16'd0;
+            baud_clk <= 1'b0;
+        end else if (cnt == DIVIDER) begin
+            cnt <= 16'd0;
+            baud_clk <= ~baud_clk;
+        end else begin
+            cnt <= cnt + 1'b1;
+            baud_clk <= baud_clk;
+        end
+    end
+
+endmodule

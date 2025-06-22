@@ -1,0 +1,43 @@
+module uart_top(
+    input wire clk,       // 系统时钟（50MHz）
+    input wire rst_n,     // 复位信号
+    input wire rx,        // 接收引脚
+    output wire tx,       // 发送引脚
+    input wire [7:0] tx_data,  // 待发送数据
+    input wire tx_en,     // 发送使能
+    output wire tx_done,  // 发送完成标志
+    output wire [7:0] rx_data,  // 接收数据
+    output wire rx_valid  // 接收有效标志
+);
+
+    wire baud_clk;  // 波特率时钟
+
+    // 实例化波特率发生器
+    baud_gen baud_gen_inst(
+        .clk(clk),
+        .rst_n(rst_n),
+        .baud_clk(baud_clk)
+    );
+
+    // 实例化发送模块
+    uart_tx uart_tx_inst(
+        .clk(clk),
+        .rst_n(rst_n),
+        .baud_clk(baud_clk),
+        .tx_en(tx_en),
+        .tx_data(tx_data),
+        .tx(tx),
+        .tx_done(tx_done)
+    );
+
+    // 实例化接收模块
+    uart_rx uart_rx_inst(
+        .clk(clk),
+        .rst_n(rst_n),
+        .baud_clk(baud_clk),
+        .rx(rx),
+        .rx_data(rx_data),
+        .rx_valid(rx_valid)
+    );
+
+endmodule

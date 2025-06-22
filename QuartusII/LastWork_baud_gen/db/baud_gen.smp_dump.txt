@@ -1,0 +1,32 @@
+
+State Machine - |uart_top|uart_rx:uart_rx_inst|next_state
+Name next_state.PARITY_CHK next_state.DATA_RX next_state.START_DET next_state.IDLE next_state.STOP_CHK 
+next_state.IDLE 0 0 0 0 0 
+next_state.START_DET 0 0 1 1 0 
+next_state.DATA_RX 0 1 0 1 0 
+next_state.PARITY_CHK 1 0 0 1 0 
+next_state.STOP_CHK 0 0 0 1 1 
+
+State Machine - |uart_top|uart_rx:uart_rx_inst|state
+Name state.PARITY_CHK state.DATA_RX state.START_DET state.IDLE state.STOP_CHK 
+state.IDLE 0 0 0 0 0 
+state.START_DET 0 0 1 1 0 
+state.DATA_RX 0 1 0 1 0 
+state.PARITY_CHK 1 0 0 1 0 
+state.STOP_CHK 0 0 0 1 1 
+
+State Machine - |uart_top|uart_tx:uart_tx_inst|next_state
+Name next_state.PARITY next_state.DATA next_state.START next_state.IDLE next_state.STOP 
+next_state.IDLE 0 0 0 0 0 
+next_state.START 0 0 1 1 0 
+next_state.DATA 0 1 0 1 0 
+next_state.PARITY 1 0 0 1 0 
+next_state.STOP 0 0 0 1 1 
+
+State Machine - |uart_top|uart_tx:uart_tx_inst|state
+Name state.PARITY state.DATA state.START state.IDLE state.STOP 
+state.IDLE 0 0 0 0 0 
+state.START 0 0 1 1 0 
+state.DATA 0 1 0 1 0 
+state.PARITY 1 0 0 1 0 
+state.STOP 0 0 0 1 1 
