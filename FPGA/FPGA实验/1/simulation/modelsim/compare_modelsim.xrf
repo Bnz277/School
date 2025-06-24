@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, D:/Desktop/FBI/1/compare.v
+source_file = 1, D:/Desktop/FBI/1/compare_tb.v
+source_file = 1, D:/Desktop/FBI/1/db/compare.cbx.xml
+design_name = compare
+instance = comp, \equal~output , equal~output, compare, 1
+instance = comp, \b~input , b~input, compare, 1
+instance = comp, \a~input , a~input, compare, 1
+instance = comp, \equal~0 , equal~0, compare, 1

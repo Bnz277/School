@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, D:/Desktop/FBI/2/half_clk.v
+source_file = 1, D:/Desktop/FBI/2/half_clk_tb.v
+source_file = 1, D:/Desktop/FBI/2/db/half_clk.cbx.xml
+design_name = half_clk
+instance = comp, \clk_out~output , clk_out~output, half_clk, 1
+instance = comp, \clk_in~input , clk_in~input, half_clk, 1
+instance = comp, \reset~input , reset~input, half_clk, 1
+instance = comp, \clk_out~0 , clk_out~0, half_clk, 1
+instance = comp, \clk_out~reg0 , clk_out~reg0, half_clk, 1

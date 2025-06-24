@@ -1,0 +1,1308 @@
+# Reading pref.tcl
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do compare_run_msim_rtl_verilog.do
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_ver ./verilog_libs/altera_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap altera_ver ./verilog_libs/altera_ver 
+# Copying D:/FPGA/modelsim2020.4/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_ver {d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_primitives.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:52:17 on Jun 22,2025
+# vlog -reportprogress 300 -vlog01compat -work altera_ver d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_primitives.v 
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_HIGH
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# End time: 22:52:17 on Jun 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+# Errors: 0, Warnings: 1
+# vmap lpm_ver ./verilog_libs/lpm_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap lpm_ver ./verilog_libs/lpm_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lpm_ver {d:/fpga/quartusii_13.0/quartus/eda/sim_lib/220model.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:52:17 on Jun 22,2025
+# vlog -reportprogress 300 -vlog01compat -work lpm_ver d:/fpga/quartusii_13.0/quartus/eda/sim_lib/220model.v 
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# End time: 22:52:17 on Jun 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+# Errors: 0, Warnings: 1
+# vmap sgate_ver ./verilog_libs/sgate_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap sgate_ver ./verilog_libs/sgate_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work sgate_ver {d:/fpga/quartusii_13.0/quartus/eda/sim_lib/sgate.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:52:18 on Jun 22,2025
+# vlog -reportprogress 300 -vlog01compat -work sgate_ver d:/fpga/quartusii_13.0/quartus/eda/sim_lib/sgate.v 
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# End time: 22:52:18 on Jun 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_mf_ver {d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_mf.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:52:18 on Jun 22,2025
+# vlog -reportprogress 300 -vlog01compat -work altera_mf_ver d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_mf.v 
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# End time: 22:52:19 on Jun 22,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver 
+# Modifying modelsim.ini
+# vlog -sv -work altera_lnsim_ver {d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:52:19 on Jun 22,2025
+# vlog -reportprogress 300 -sv -work altera_lnsim_ver d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv 
+# -- Compiling package altera_lnsim_functions
+# -- Compiling module altera_pll
+# -- Importing package altera_lnsim_functions
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module pll_dps_lcell_comb
+# -- Compiling module altera_stratixv_pll
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4001): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4008): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4018): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4028): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4100): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4172): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4515): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4522): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4543): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4550): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4584): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4588): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4603): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4638): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4650): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4654): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4658): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4662): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4667): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4668): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4669): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4711): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4712): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4713): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4754): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4755): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4756): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4763): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4764): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4765): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4771): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4772): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4773): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4779): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4780): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4781): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4784): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4785): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4787): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4788): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4789): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4795): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4796): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4797): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4803): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4804): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4805): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4811): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4812): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4813): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4819): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4820): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4821): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4827): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4828): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4829): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4835): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4836): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4837): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4843): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4844): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4845): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4851): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4852): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4853): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4859): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4860): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4861): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4867): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4868): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4869): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4881): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4882): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4883): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4889): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4890): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4891): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4897): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4898): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4899): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4906): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4907): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4908): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4915): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4916): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4917): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4923): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4924): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4925): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4931): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4932): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4933): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4939): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4940): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4941): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4947): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4948): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4949): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4956): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4957): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4958): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4970): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4971): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4972): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4979): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4980): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4981): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4988): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4989): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4990): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4997): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4998): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(4999): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5006): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5007): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5008): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5068): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5069): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5070): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5109): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5110): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5111): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5150): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5151): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5152): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5191): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5192): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5193): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5232): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5233): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5234): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5273): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5274): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5275): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5316): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5317): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5318): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5358): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5359): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5360): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5380): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5381): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5382): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5388): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5389): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5390): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5397): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5398): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5399): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5405): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5406): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5407): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5419): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5420): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5421): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5433): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5434): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5435): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5447): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5448): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5449): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5791): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5795): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5808): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5836): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5847): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5851): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5854): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5860): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5863): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5867): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5867): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module altera_arriav_pll
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5874): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5881): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5891): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5901): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(5973): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6045): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6388): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6395): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6416): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6423): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6457): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6461): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6476): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6511): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6523): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6527): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6531): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6535): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6540): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6541): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6542): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6584): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6585): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6586): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6627): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6628): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6629): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6636): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6637): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6638): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6644): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6645): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6646): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6652): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6653): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6654): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6657): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6658): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6660): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6661): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6662): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6668): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6669): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6670): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6676): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6677): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6678): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6684): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6685): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6686): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6692): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6693): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6694): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6700): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6701): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6702): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6708): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6709): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6710): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6716): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6717): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6718): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6724): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6725): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6726): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6732): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6733): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6734): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6740): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6741): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6742): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6754): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6755): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6756): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6762): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6763): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6764): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6770): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6771): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6772): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6779): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6780): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6781): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6788): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6789): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6790): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6796): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6797): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6798): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6804): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6805): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6806): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6812): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6813): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6814): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6820): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6821): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6822): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6829): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6830): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6831): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6843): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6844): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6845): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6852): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6853): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6854): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6861): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6862): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6863): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6870): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6871): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6872): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6879): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6880): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6881): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6941): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6942): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6943): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6982): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6983): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(6984): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7023): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7024): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7025): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7064): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7065): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7066): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7105): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7106): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7107): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7146): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7147): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7148): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7189): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7190): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7191): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7231): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7232): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7233): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7253): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7254): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7255): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7261): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7262): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7263): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7270): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7271): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7272): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7278): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7279): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7280): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7292): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7293): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7294): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7306): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7307): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7308): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7320): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7321): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7322): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7665): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7669): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7682): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7710): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7721): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7725): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7728): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7734): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7737): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7741): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module altera_arriavgz_pll
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7748): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7755): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7765): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7775): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7847): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(7919): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8262): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8269): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8290): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8297): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8331): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8335): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8350): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8385): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8397): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8401): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8405): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8409): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8414): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8415): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8416): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8458): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8459): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8460): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8501): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8502): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8503): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8510): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8511): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8512): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8518): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8519): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8520): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8526): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8527): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8528): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8531): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8532): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8534): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8535): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8536): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8542): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8543): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8544): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8550): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8551): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8552): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8558): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8559): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8560): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8566): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8567): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8568): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8574): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8575): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8576): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8582): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8583): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8584): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8590): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8591): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8592): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8598): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8599): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8600): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8606): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8607): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8608): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8614): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8615): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8616): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8628): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8629): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8630): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8636): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8637): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8638): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8644): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8645): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8646): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8653): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8654): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8655): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8662): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8663): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8664): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8670): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8671): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8672): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8678): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8679): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8680): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8686): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8687): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8688): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8694): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8695): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8696): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8703): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8704): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8705): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8717): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8718): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8719): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8726): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8727): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8728): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8735): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8736): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8737): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8744): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8745): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8746): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8753): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8754): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8755): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8815): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8816): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8817): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8856): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8857): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8858): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8897): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8898): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8899): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8938): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8939): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8940): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8979): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8980): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(8981): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9020): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9021): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9022): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9063): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9064): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9065): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9105): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9106): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9107): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9127): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9128): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9129): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9135): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9136): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9137): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9144): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9145): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9146): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9152): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9153): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9154): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9166): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9167): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9168): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9180): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9181): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9182): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9194): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9195): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9196): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9538): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9542): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9555): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9583): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9594): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9598): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9601): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9607): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9610): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9614): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9614): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module altera_cyclonev_pll
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9621): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9628): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9638): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9648): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9720): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9893): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9898): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9910): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9914): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9933): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9936): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9951): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9980): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9992): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(9996): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10000): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10004): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10009): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10010): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10011): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10053): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10054): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10055): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10096): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10097): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10098): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10105): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10106): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10107): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10113): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10114): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10115): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10121): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10122): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10123): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10126): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10127): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10129): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10130): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10131): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10136): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10137): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10138): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10143): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10144): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10145): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10150): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10151): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10152): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10157): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10158): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10159): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10164): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10165): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10166): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10171): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10172): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10173): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10178): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10179): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10180): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10185): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10186): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10187): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10192): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10193): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10194): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10199): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10200): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10201): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10210): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10211): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10212): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10217): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10218): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10219): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10224): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10225): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10226): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10231): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10232): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10233): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10238): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10239): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10240): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10245): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10246): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10247): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10252): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10253): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10254): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10259): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10260): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10261): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10266): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10267): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10268): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10273): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10274): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10275): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10284): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10285): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10286): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10291): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10292): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10293): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10298): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10299): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10300): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10305): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10306): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10307): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10312): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10313): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10314): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10346): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10347): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10348): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10369): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10370): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10371): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10392): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10393): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10394): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10415): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10416): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10417): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10438): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10439): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10440): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10461): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10462): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10463): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10485): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10486): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10487): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10517): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10518): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10519): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10534): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10535): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10536): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10541): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10542): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10543): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10548): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10549): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10550): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10555): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10556): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10557): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10566): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10567): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10568): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10577): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10578): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10579): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10588): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10589): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10590): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10768): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10771): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10785): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10808): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10819): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10823): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10826): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10832): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10835): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) d:/fpga/quartusii_13.0/quartus/eda/sim_lib/altera_lnsim.sv(10841): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module altera_pll_reconfig_tasks
+# 
+# Top level modules:
+# 	altera_pll
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# End time: 22:52:20 on Jun 22,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 685
+# 
+# vlib verilog_libs/cycloneive_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneive_ver".
+# Errors: 0, Warnings: 1
+# vmap cycloneive_ver ./verilog_libs/cycloneive_ver
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap cycloneive_ver ./verilog_libs/cycloneive_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneive_ver {d:/fpga/quartusii_13.0/quartus/eda/sim_lib/cycloneive_atoms.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:52:20 on Jun 22,2025
+# vlog -reportprogress 300 -vlog01compat -work cycloneive_ver d:/fpga/quartusii_13.0/quartus/eda/sim_lib/cycloneive_atoms.v 
+# -- Compiling UDP CYCLONEIVE_PRIM_DFFE
+# -- Compiling UDP CYCLONEIVE_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEIVE_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneive_dffe
+# -- Compiling module cycloneive_mux21
+# -- Compiling module cycloneive_mux41
+# -- Compiling module cycloneive_and1
+# -- Compiling module cycloneive_and16
+# -- Compiling module cycloneive_bmux21
+# -- Compiling module cycloneive_b17mux21
+# -- Compiling module cycloneive_nmux21
+# -- Compiling module cycloneive_b5mux21
+# -- Compiling module cycloneive_latch
+# -- Compiling module cycloneive_routing_wire
+# -- Compiling module cycloneive_m_cntr
+# -- Compiling module cycloneive_n_cntr
+# -- Compiling module cycloneive_scale_cntr
+# -- Compiling module cycloneive_pll_reg
+# -- Compiling module cycloneive_pll
+# -- Compiling module cycloneive_lcell_comb
+# -- Compiling module cycloneive_ff
+# -- Compiling module cycloneive_ram_pulse_generator
+# -- Compiling module cycloneive_ram_register
+# -- Compiling module cycloneive_ram_block
+# -- Compiling module cycloneive_mac_data_reg
+# -- Compiling module cycloneive_mac_sign_reg
+# -- Compiling module cycloneive_mac_mult_internal
+# -- Compiling module cycloneive_mac_mult
+# -- Compiling module cycloneive_mac_out
+# -- Compiling module cycloneive_io_ibuf
+# -- Compiling module cycloneive_io_obuf
+# -- Compiling module cycloneive_ddio_out
+# -- Compiling module cycloneive_ddio_oe
+# -- Compiling module cycloneive_pseudo_diff_out
+# -- Compiling module cycloneive_io_pad
+# -- Compiling module cycloneive_ena_reg
+# -- Compiling module cycloneive_clkctrl
+# -- Compiling module cycloneive_rublock
+# -- Compiling module cycloneive_apfcontroller
+# -- Compiling module cycloneive_termination_ctrl
+# -- Compiling module cycloneive_termination_rupdn
+# -- Compiling module cycloneive_termination
+# -- Compiling module cycloneive_jtag
+# -- Compiling module cycloneive_crcblock
+# -- Compiling module cycloneive_oscillator
+# 
+# Top level modules:
+# 	cycloneive_dffe
+# 	cycloneive_and1
+# 	cycloneive_and16
+# 	cycloneive_bmux21
+# 	cycloneive_b17mux21
+# 	cycloneive_nmux21
+# 	cycloneive_b5mux21
+# 	cycloneive_pll_reg
+# 	cycloneive_pll
+# 	cycloneive_lcell_comb
+# 	cycloneive_ff
+# 	cycloneive_ram_block
+# 	cycloneive_mac_mult
+# 	cycloneive_mac_out
+# 	cycloneive_io_ibuf
+# 	cycloneive_io_obuf
+# 	cycloneive_ddio_out
+# 	cycloneive_ddio_oe
+# 	cycloneive_pseudo_diff_out
+# 	cycloneive_io_pad
+# 	cycloneive_clkctrl
+# 	cycloneive_rublock
+# 	cycloneive_apfcontroller
+# 	cycloneive_termination
+# 	cycloneive_jtag
+# 	cycloneive_crcblock
+# 	cycloneive_oscillator
+# End time: 22:52:20 on Jun 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FBI/1 {D:/Desktop/FBI/1/compare.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:52:21 on Jun 22,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Desktop/FBI/1" D:/Desktop/FBI/1/compare.v 
+# -- Compiling module compare
+# 
+# Top level modules:
+# 	compare
+# End time: 22:52:21 on Jun 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FBI/1 {D:/Desktop/FBI/1/compare_tb.v}
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:52:21 on Jun 22,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Desktop/FBI/1" D:/Desktop/FBI/1/compare_tb.v 
+# -- Compiling module compare_tb
+# 
+# Top level modules:
+# 	compare_tb
+# End time: 22:52:21 on Jun 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  compare_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" compare_tb 
+# Start time: 22:52:21 on Jun 22,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.compare_tb(fast)
+# Loading work.compare(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# At time                    0: a=0, b=0, equal=1
+# At time                10000: a=0, b=1, equal=0
+# At time                20000: a=1, b=0, equal=0
+# At time                30000: a=1, b=1, equal=1
+# ** Note: $finish    : D:/Desktop/FBI/1/compare_tb.v(38)
+#    Time: 40 ns  Iteration: 0  Instance: /compare_tb
+# 1
+# Break in Module compare_tb at D:/Desktop/FBI/1/compare_tb.v line 38
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.compare_tb(fast)
+# Loading work.compare(fast)
+run -all
+# At time                    0: a=0, b=0, equal=1
+# At time                10000: a=0, b=1, equal=0
+# At time                20000: a=1, b=0, equal=0
+# At time                30000: a=1, b=1, equal=1
+# ** Note: $finish    : D:/Desktop/FBI/1/compare_tb.v(38)
+#    Time: 40 ns  Iteration: 0  Instance: /compare_tb
+# 1
+# Break in Module compare_tb at D:/Desktop/FBI/1/compare_tb.v line 38
+# Break key hit
+run -continue
+run
+run
+run
+run
+run
+# Break key hit
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.compare_tb(fast)
+# Loading work.compare(fast)
+run -all
+# At time                    0: a=0, b=0, equal=1
+# At time                10000: a=0, b=1, equal=0
+# At time                20000: a=1, b=0, equal=0
+# At time                30000: a=1, b=1, equal=1
+# ** Note: $finish    : D:/Desktop/FBI/1/compare_tb.v(38)
+#    Time: 40 ns  Iteration: 0  Instance: /compare_tb
+# 1
+# Break in Module compare_tb at D:/Desktop/FBI/1/compare_tb.v line 38
+# End time: 22:53:36 on Jun 22,2025, Elapsed time: 0:01:15
+# Errors: 0, Warnings: 0

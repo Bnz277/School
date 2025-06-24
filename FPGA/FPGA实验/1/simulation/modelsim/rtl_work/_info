@@ -1,0 +1,68 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Desktop/FBI/1/simulation/modelsim
+T_opt
+!s110 1750603942
+VSMAEc1a^MW]4dA2z2[gD41
+04 10 4 work compare_tb fast 0
+=1-106fd9f0ebe5-685818a6-c6-125c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vcompare
+Z2 !s110 1750603941
+!i10b 1
+!s100 Sb:oZkcBK3AlajTcD>@^f1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IWmNnoDg_L2`:>71mj6>mg2
+R0
+w1750602514
+8D:/Desktop/FBI/1/compare.v
+FD:/Desktop/FBI/1/compare.v
+!i122 0
+L0 3 6
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1750603941.000000
+!s107 D:/Desktop/FBI/1/compare.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FBI/1|D:/Desktop/FBI/1/compare.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work +incdir+D:/Desktop/FBI/1 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vcompare_tb
+R2
+!i10b 1
+!s100 2]2V:>[_5M9HDjhBN5A3l2
+R3
+IQj4<`H1PJacY?LeBiL=0@0
+R0
+w1750603878
+8D:/Desktop/FBI/1/compare_tb.v
+FD:/Desktop/FBI/1/compare_tb.v
+!i122 1
+L0 3 39
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Desktop/FBI/1/compare_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FBI/1|D:/Desktop/FBI/1/compare_tb.v|
+!i113 0
+R7
+R8
+R1

@@ -1,0 +1,6 @@
+|compare
+equal <= equal.DB_MAX_OUTPUT_PORT_TYPE
+a => equal.IN0
+b => equal.IN1
+
+
