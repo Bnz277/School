@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爬虫工具 - NYLG 智能网络爬虫工具</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --secondary-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding-top: 80px;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 24px;
+            box-shadow: 
+                0 32px 64px rgba(0, 0, 0, 0.12),
+                0 16px 32px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        /* 修复爬取结果区域太亮的问题 */
+        .result-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            box-shadow: 
+                0 32px 64px rgba(0, 0, 0, 0.12),
+                0 16px 32px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        .spider-type-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        .spider-type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .spider-type-card.selected {
+            background: var(--primary-gradient);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .spider-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 24px;
+            color: white;
+        }
+        
+        .btn-gradient {
+            background: var(--primary-gradient);
+            border: none;
+            color: white;
+            border-radius: 25px;
+            padding: 16px 32px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 8px 24px rgba(102, 126, 234, 0.3),
+                0 4px 12px rgba(102, 126, 234, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-gradient:hover::before {
+            left: 100%;
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 16px 40px rgba(102, 126, 234, 0.4),
+                0 8px 20px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+        
+        .btn-gradient:active {
+            transform: translateY(-1px);
+        }
+        
+        /* 修复导出按钮不明显的问题 */
+        .export-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 8px 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            color: white;
+        }
+        
+        .export-btn.json {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        }
+        
+        .export-btn.csv {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            box-shadow: 0 4px 15px rgba(67, 233, 123, 0.3);
+        }
+        
+        .export-btn.txt {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3);
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 3em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        
+        .nav-link:hover {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        
+        .stats-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .floating-tips {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .tip-bubble {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease;
+            max-width: 300px;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .loading-content {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 
+                0 32px 64px rgba(0, 0, 0, 0.3),
+                0 16px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: scaleIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 24px;
+            position: relative;
+        }
+        
+        .spinner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid rgba(102, 126, 234, 0.2);
+            border-radius: 50%;
+        }
+        
+        .spinner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .result-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .result-item h5 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .result-item p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+        }
+        
+        .result-item a {
+            color: #4facfe;
+            text-decoration: none;
+        }
+        
+        .result-item a:hover {
+            color: #00f2fe;
+        }
+        
+        .badge-number {
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        /* 弹窗样式 */
+        .alert-container {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
+            max-width: 420px;
+        }
+        
+        .alert {
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            border-radius: 16px;
+            color: white;
+            font-weight: 500;
+            box-shadow: 
+                0 16px 40px rgba(0, 0, 0, 0.2),
+                0 8px 20px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideInBounce 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .alert::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .alert-success {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.95), rgba(69, 160, 73, 0.95));
+        }
+        
+        .alert-error {
+            background: linear-gradient(135deg, rgba(244, 67, 54, 0.95), rgba(211, 47, 47, 0.95));
+        }
+        
+        .alert-info {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.95), rgba(25, 118, 210, 0.95));
+        }
+        
+        @keyframes slideInBounce {
+            0% {
+                transform: translateX(100%) scale(0.8);
+                opacity: 0;
+            }
+            60% {
+                transform: translateX(-10%) scale(1.05);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideOut {
+            0% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100%) scale(0.8);
+                opacity: 0;
+            }
+        }
+        
+        .alert.fade-out {
+            animation: slideOut 0.3s ease-in forwards;
+        }
+        
+        .form-control {
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 
+                0 0 0 4px rgba(102, 126, 234, 0.15),
+                0 8px 24px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.98);
+            transform: translateY(-2px);
+            outline: none;
+        }
+        
+        .form-control::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-robot"></i> NYLG 爬虫工具
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/crawler">爬虫工具</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/docs">使用文档</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- 统计信息 -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="stats-card p-3">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="bi bi-calendar-day text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0">今日爬取</h6>
+                            <h4 class="mb-0 text-primary" id="todayCount">0</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="stats-card p-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <i class="bi bi-graph-up text-success" style="font-size: 2rem;"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">总计爬取</h6>
+                                <h4 class="mb-0 text-success" id="totalCount">0</h4>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm" onclick="resetStats()">
+                            <i class="bi bi-arrow-clockwise"></i> 重置
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 爬虫工具区域 -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="glass-card">
+                    <div class="card-header border-0 bg-transparent text-white">
+                        <h5 class="mb-0"><i class="bi bi-robot"></i> 爬虫工具</h5>
+                        <small class="text-light">选择您需要的爬虫类型，开始数据采集之旅</small>
+                    </div>
+                    <div class="card-body">
+                        <!-- 数据类型选择 - 仅对URL爬取有效，后台自动处理 -->
+                        <div class="mb-4" id="data-type-section" style="display: none;">
+                            <div class="alert alert-info" role="alert">
+                                <i class="bi bi-info-circle"></i>
+                                <strong>智能内容识别</strong>：系统将自动识别并爬取网页中的文本、图片、视频等多种内容类型
+                            </div>
+                        </div>
+
+                        <!-- 爬虫类型选择 -->
+                        <div class="mb-4">
+                            <label class="form-label text-white">选择爬虫类型</label>
+                            <div class="row" id="spider-types">
+                                <div class="col-md-3 mb-3">
+                                    <div class="card spider-type-card" data-type="baidu">
+                                        <div class="card-body text-center">
+                                            <div class="spider-icon" style="background: var(--primary-gradient);">
+                                                <i class="bi bi-search"></i>
+                                            </div>
+                                            <h6>百度搜索</h6>
+                                            <small class="text-muted">搜索百度内容</small>
+                                            <div class="mt-2">
+                                                <span class="badge bg-primary">热门</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card spider-type-card" data-type="bilibili">
+                                        <div class="card-body text-center">
+                                            <div class="spider-icon" style="background: var(--success-gradient);">
+                                                <i class="bi bi-play-circle"></i>
+                                            </div>
+                                            <h6>B站搜索</h6>
+                                            <small class="text-muted">搜索B站视频</small>
+                                            <div class="mt-2">
+                                                <span class="badge bg-info">视频</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card spider-type-card" data-type="csdn">
+                                        <div class="card-body text-center">
+                                            <div class="spider-icon" style="background: var(--warning-gradient);">
+                                                <i class="bi bi-code-slash"></i>
+                                            </div>
+                                            <h6>CSDN搜索</h6>
+                                            <small class="text-muted">搜索技术文章</small>
+                                            <div class="mt-2">
+                                                <span class="badge bg-warning">技术</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card spider-type-card" data-type="url">
+                                        <div class="card-body text-center">
+                                            <div class="spider-icon" style="background: var(--secondary-gradient);">
+                                                <i class="bi bi-globe"></i>
+                                            </div>
+                                            <h6>网页爬取</h6>
+                                            <small class="text-muted">爬取指定网页</small>
+                                            <div class="mt-2">
+                                                <span class="badge bg-success">自定义</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 参数输入区域 -->
+                        <div id="parameterSection" style="display: none;">
+                            <div id="parameterForm">
+                                <!-- 动态生成参数表单 -->
+                            </div>
+                        </div>
+
+                        <!-- 执行按钮 -->
+                        <div class="text-center mt-4">
+                            <button class="btn btn-gradient btn-lg pulse" id="execute-btn" onclick="executeCrawl()" disabled>
+                                <i class="bi bi-play-circle"></i> 开始爬取
+                            </button>
+                            <div class="mt-2">
+                                <small class="text-light">💡 提示：选择爬虫类型后输入参数即可开始</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 执行结果 -->
+                <div id="crawl-result" class="result-card mt-4" style="display: none;">
+                    <div class="card-header border-0 bg-transparent text-white">
+                        <h5 class="mb-0"><i class="bi bi-check-circle"></i> 爬取结果</h5>
+                        <small class="text-light">数据已成功获取，支持多种格式导出</small>
+                    </div>
+                    <div class="card-body" id="result-content">
+                        <!-- 结果内容将在这里显示 -->
+                    </div>
+                </div>
+
+                <!-- 加载动画 -->
+                <div id="loading" class="loading-spinner">
+                    <div class="glass-card p-4 text-center">
+                        <div class="spinner-border text-light" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="text-white mt-3 mb-0">正在爬取数据，请稍候...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 浮动提示容器 -->
+    <div id="floatingTips" class="floating-tips"></div>
+
+    <!-- 警告提示容器 -->
+    <div id="alertContainer" class="position-fixed" style="top: 80px; right: 20px; z-index: 1050; width: 300px;">
+        <!-- 动态生成的警告提示将在这里显示 -->
+    </div>
+
+    <!-- 加载遮罩层 -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="glass-card p-4 text-center">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p id="loadingText" class="text-white mt-3 mb-0">加载中...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
