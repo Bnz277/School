@@ -1,0 +1,33 @@
+!table
+!version 300
+!charset WindowsSimpChinese
+
+Definition Table
+  Type NATIVE Charset "Neutral"
+  Fields 20
+    Cell_ID Char (8) ;
+    eNodeB_ID Char (9) ;
+    Sect_ID Smallint ;
+    CellName Char (26) ;
+    Azimuth Smallint ;
+    PCI Char (3) ;
+    CoverageZone Char (5) ;
+    Region Char (6) ;
+    Longitude Float ;
+    Latitude Float ;
+    _COL11 Char (11) ;
+    _COL12 Char (4) ;
+    _COL13 Char (11) ;
+    CellRadius Char (8) ;
+    _COL15 Char (9) ;
+    _COL16 Integer ;
+    _COL17 Smallint ;
+    _COL18 Char (12) ;
+    HorizontalBeamwidth Smallint ;
+    RootSeqNum Smallint ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "19963c05-c635-4760-bc88-03b00ed009fc"
+"\MapInfo\ParentTableID" = "36b6ba22-d6be-4dc5-b9db-46c5cc2797e9"
+end_metadata

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<desc>
+    <username>admin</username>
+    <ip>192.254.1.128</ip>
+    <time>2024-06-03 18:16:00</time>
+    <note></note>
+    <configsetlist>
+        <configset SubNetwork="3" MEID="35062" ConfigSet="" SUBNET_USERLABEL="di3zu" NE_USERLABEL="通信二班王旭峰实验" TOPONAME="BS8700$35062[TDL][通信二班王旭峰实验]" SWVERSION="TDL_V3.20.50.30" PLATVERSION="PLAT_V1.2.2.1B16" USERLABEL="" ISMAIN="" STATUS="">SubNetwork=3,MEID=35062</configset>
+    </configsetlist>
+    <umsversion>12.14.31</umsversion>
+    <platversion>PLAT_V1.2.2.1B16</platversion>
+</desc>
+

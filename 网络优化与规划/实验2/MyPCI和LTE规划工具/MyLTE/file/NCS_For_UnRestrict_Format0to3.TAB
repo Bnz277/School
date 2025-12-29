@@ -1,0 +1,17 @@
+!table
+!version 1000
+!charset WindowsSimpChinese
+
+Definition Table
+  Type NATIVE Charset "WindowsSimpChinese"
+  Fields 5
+    zeroCorrelationZoneConfig Smallint ;
+    NCS Smallint ;
+    CellRadius Integer ;
+    PreamblePerSequence Smallint ;
+    SequenceNum Smallint ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "7d1085a3-939c-4bbc-a780-c690ba8ed400"
+end_metadata

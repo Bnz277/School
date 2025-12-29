@@ -1,0 +1,31 @@
+!table
+!version 300
+!charset WindowsSimpChinese
+
+Definition Table
+  File "规划 - 副本.csv"
+  Type ASCII Delimiter "," Charset "WindowsLatin1"
+  Fields 18
+    _COL1 Char (8) ;
+    _COL2 Char (9) ;
+    _COL3 Char (7) ;
+    _COL4 Char (26) ;
+    _COL5 Char (7) ;
+    _COL6 Char (3) ;
+    _COL7 Char (12) ;
+    _COL8 Char (6) ;
+    _COL9 Char (9) ;
+    _COL10 Char (8) ;
+    _COL11 Char (11) ;
+    _COL12 Char (4) ;
+    _COL13 Char (11) ;
+    _COL14 Char (8) ;
+    _COL15 Char (9) ;
+    _COL16 Integer ;
+    _COL17 Smallint ;
+    _COL18 Char (12) ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "36b6ba22-d6be-4dc5-b9db-46c5cc2797e9"
+end_metadata
